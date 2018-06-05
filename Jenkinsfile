@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         writeFile(file: 'File1', text: 'Esta es la construcción de un nuevo archivo desde el pipeline')
-        build 'Segundo paso'
+        build 'Prueba maven'
       }
     }
     stage('Test') {
