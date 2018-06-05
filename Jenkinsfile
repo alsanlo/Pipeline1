@@ -1,15 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Inicialización') {
+    stage('Inicializacion') {
       steps {
         echo 'Inicializando.....'
-        sh 'echo "Este es el inicio del Pipeline"'
+        sh 'date'
       }
     }
     stage('Build') {
       steps {
-        writeFile(file: 'File1', text: 'Esta es la construcción de un nuevo archivo desde el pipeline')
+        writeFile(file: 'File1', text: 'Esta es la construcciÃ³n de un nuevo archivo desde el pipeline')
         build 'JobCreartedByBOc'
       }
     }
@@ -26,12 +26,12 @@ pipeline {
         }
         stage('Paralelo 1') {
           steps {
-            echo 'Esto es la muestra de un código en paralelo'
+            echo 'Esto es la muestra de un cÃ³digo en paralelo'
           }
         }
         stage('Paralelo2') {
           steps {
-            echo 'Esto es la muestra de un código en paralelo'
+            echo 'Esto es la muestra de un cÃ³digo en paralelo'
           }
         }
       }
