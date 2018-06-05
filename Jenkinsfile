@@ -37,7 +37,10 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        ws(dir: 'Pipeline2')
+        ws(dir: 'Pipeline2') {
+          build 'BuildSample'
+        }
+
       }
     }
     stage('End of this Pipeline') {
