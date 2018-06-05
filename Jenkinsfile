@@ -4,7 +4,6 @@ pipeline {
     stage('Inicializacion') {
       steps {
         echo 'Inicializando.....'
-        sh 'date'
       }
     }
     stage('Build') {
